@@ -3,17 +3,24 @@ package lv.rvt;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 
-public class App 
-{
-    public static void main( String[] args )
-    {
-        String name = "Artjoms";
-        int age = 16;
-        boolean isOnline = true;
+import java.util.Scanner;
 
-        System.out.println(name);
-        System.out.println(age);
-        System.out.println(isOnline);
+public class App{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ievadi savu vārdu: ");
+
+        String name = scanner.nextLine();
+
+        System.out.println("Ievadi savu uzvārdu: ");
+
+        String surname = scanner.nextLine();
+
+        System.out.println("Ievadi savu grupu: ");
+
+        String group = scanner.nextLine();
+
+        System.out.println("Students: " + name + " " + surname + ", grupa: " + group);
     }
-
 }

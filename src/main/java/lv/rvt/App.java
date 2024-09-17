@@ -9,11 +9,17 @@ public class App{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Give speed:");
-        int speed = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the first number:");
+        int digit1 = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number:");
+        int digit2 = Integer.valueOf(scanner.nextLine());
         
-        if (speed > 120){
-            System.out.println("Speeding ticket!");
+        if (digit1 > digit2) {
+            System.out.println("Greater number is: " + digit1);
+        } else if (digit2 > digit1){
+            System.out.println("Greater number is: " + digit2);
+        } else {
+            System.out.println("The numbers are equal");
         }
     }
 }

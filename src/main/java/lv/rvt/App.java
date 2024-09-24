@@ -7,23 +7,13 @@ import java.util.Scanner;
 
 public class App{
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        int count = 0;
-        int sum = 0;
-
-        while(true){
-            System.out.println("Give a number: ");
-            int number = Integer.valueOf(scanner.nextLine());
-            if (number == 0){
-                break;
-            }
-            count++;
-            sum += number;
-
-        }
-        System.out.println("Number of numbers: " + count);
-        System.out.println("Sum of the numbers: " + sum);   
         
+        Scanner scanner = new Scanner(System.in);
+        int number = Integer.valueOf(scanner.nextLine());
+
+        for(int y = number; y < 101; y++){
+            System.out.println(y);
+        }
+
     }
 }

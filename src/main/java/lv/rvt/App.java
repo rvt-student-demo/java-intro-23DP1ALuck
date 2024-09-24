@@ -32,7 +32,7 @@ public class App{
             System.out.println("Tax: " + value);
         }
         else if (value >= 1000000){
-            value = (double) (1700 + (value-1000000) * 0.1);
+            value = (double) (1700 + (value-1000000) * 0.17);
             System.out.println("Tax: " + value);
         }
 

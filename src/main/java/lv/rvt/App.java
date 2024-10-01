@@ -7,11 +7,14 @@ import java.util.Scanner;
 
 public class App{
     public static void main(String[] args) {
-        printUntilNumber(5);
+        divisibleByThreeInRange(2, 10);
     }
-    public static void printUntilNumber(int number){
-        for(int i = 1; i<=number; i++){
-            System.out.println(i);
+
+    public static void divisibleByThreeInRange(int beginning, int end){
+        for(int x = beginning; x <= end; x++){
+            if(x % 3 == 0){
+                System.out.println(x);
+            }
         }
     }
 }

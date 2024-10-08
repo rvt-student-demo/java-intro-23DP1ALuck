@@ -18,7 +18,6 @@ public class App{
         for(int x = 0; x < size; x++){
             printStars(size);
         }
-        System.out.println("");
     }
     public static void printRectangle(int width, int height){
         for(int stars = 0; stars < height; stars++){

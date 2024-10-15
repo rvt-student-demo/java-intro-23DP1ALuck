@@ -16,13 +16,20 @@ public class App{
 
         while(true){
             int number = scanner.nextInt();
+
             if (number == 0){
                 break;
             }
-            numbers.add(number);
+            if (number > 0){
+                numbers.add(number);
+            }
         }
-        System.out.println(numbers.get(1)+numbers.get(2));
-    
+        
+        int sum = 0;
+        for(int x = 0; x < numbers.size(); x++){
+            sum += numbers.get(x);
+        }
+        System.out.println(sum);
     }    
 }
     

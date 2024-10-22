@@ -17,21 +17,32 @@ public class App{
         while(true){
             int number = scanner.nextInt();
 
-            if (number == 0){
+            if (number == -1){
                 break;
             }
-            if (number > 0){
+            else{
                 numbers.add(number);
             }
-        }
-        
-        int sum = 0;
-        for(int x = 0; x < numbers.size(); x++){
-            sum += numbers.get(x);
-        }
-        System.out.println(sum);
-    }    
-}
+    }   
     
+        while(true){
+            System.out.println("From where?");
+            int begin = scanner.nextInt();
+            System.out.println("To where?");
+            int finish = scanner.nextInt();
+
+            if (begin < 0 || finish > (numbers.size() - 1)){
+                System.out.println("Incorrect value");
+                continue;
+            } 
+            else{
+                for(int i = begin; i < (finish + 1); i++){
+                    System.out.println(numbers.get(i));
+                }
+            break;
+            }
+        }
+    }
+}    
    
 

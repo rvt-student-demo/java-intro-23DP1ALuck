@@ -9,46 +9,15 @@ import java.util.Scanner;
 
 class App{
     public static void main(String[] args) {
-        DecreasingCounter counter = new DecreasingCounter(10);
-        DecreasingCounter counter2 = new DecreasingCounter(2);
-        DecreasingCounter counter3 = new DecreasingCounter(100);
 
-        // part 1
-        System.out.println("Part 1");
+        Agent bond = new Agent("James", "Bond");
 
-        counter.printValue();
+        bond.toString(); // prints nothing
+        System.out.println(bond);
 
-        counter.decrement();
-        counter.printValue();
+        Agent ionic = new Agent("Ionic", "Bond");
+        System.out.println(ionic);
 
-        counter.decrement();
-        counter.printValue();
-
-
-        // part 2
-        System.out.println("Part 2");
-        counter2.printValue();
-
-        counter2.decrement();
-        counter2.printValue();
-
-        counter2.decrement();
-        counter2.printValue();
-
-        counter2.decrement();
-        counter2.printValue();
-
-        // part 3
-        System.out.println("Part 3");
-        counter3.printValue();
-
-        counter3.reset();
-        counter3.printValue();
-
-        counter3.decrement();
-        counter3.printValue();
-
-
-   }    
+    }    
 }
 

@@ -10,7 +10,7 @@ import java.util.Scanner;
 class App{
     public static void main(String[] args) {
 
-        System.out.println("Part 1,2,3");
+        System.out.println("Part 1,2");
 
         PaymentCard card = new PaymentCard(50);
         System.out.println(card);
@@ -21,6 +21,16 @@ class App{
         card.eatHeartily();
         card.eatAffordably();
         System.out.println(card);
+
+        System.out.println("Part 3");
+        PaymentCard card33 = new PaymentCard(5);
+        System.out.println(card33);
+
+        card33.eatHeartily();
+        System.out.println(card33);
+
+        card33.eatHeartily();
+        System.out.println(card33);
 
         System.out.println("Part 4");
 

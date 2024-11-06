@@ -10,40 +10,61 @@ import java.util.Scanner;
 class App{
     public static void main(String[] args) {
 
-        // Part 1 and part 2
-        Statistics statistics = new Statistics();
-        Statistics statiscitsOdd = new Statistics();
-        Statistics statisticsEven = new Statistics();
-        // statistics.addNumber(3);
-        // statistics.addNumber(5);
-        // statistics.addNumber(1);
-        // statistics.addNumber(2);
+        System.out.println("Part 1,2,3");
 
-        // System.out.println("Count: " + statistics.getCount());
-        // System.out.println("Sum: " + statistics.sum());
-        // System.out.println("Average: " + statistics.average());
+        PaymentCard card = new PaymentCard(50);
+        System.out.println(card);
 
-        //Part 3 and part 4
-        Scanner scanner = new Scanner(System.in);
+        card.eatAffordably();
+        System.out.println(card);
 
-        System.out.println("Enter numbers: ");
-        while(true){
-            int input = scanner.nextInt();
-            if (input == -1){
-                break;
-            }
-            else if(input % 2 == 0){
-                statisticsEven.addNumber(input);
-                statistics.addNumber(input);
-            }
-            else if(input % 2 != 0){
-                statiscitsOdd.addNumber(input);
-                statistics.addNumber(input);
-            }
-        }
-        System.out.println("Sum: " + statistics.sum());
-        System.out.println("Sum of even numbers: " + statisticsEven.sum());
-        System.out.println("Sum of odd numbers: " + statiscitsOdd.sum());
+        card.eatHeartily();
+        card.eatAffordably();
+        System.out.println(card);
+
+        System.out.println("Part 4");
+
+        PaymentCard card2 = new PaymentCard(10);
+        System.out.println(card2);
+
+        card2.addMoney(15);
+        System.out.println(card2);
+
+        card2.addMoney(10);
+        System.out.println(card2);
+
+        card2.addMoney(200);
+        System.out.println(card2);
+
+        System.out.println("Part 5");
+        PaymentCard card3 = new PaymentCard(10);
+        System.out.println("Paul: " + card3);
+        card.addMoney(-15);
+        System.out.println("Paul: " + card3);
+
+        System.out.println("Part 6");
+
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
+
+        paulsCard.eatHeartily();
+        mattsCard.eatAffordably();
+        
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+
+        paulsCard.addMoney(20);
+        mattsCard.eatHeartily();
+
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+        mattsCard.addMoney(50);
+
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
     }    
 }
 

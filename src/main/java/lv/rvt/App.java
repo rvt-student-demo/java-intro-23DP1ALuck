@@ -11,12 +11,11 @@ import java.util.Scanner;
 
 class App{
     public static void main(String[] args) throws Exception{
-        Product tapeMeasure = new Product("Tape measure");
-        Product plaster = new Product("Plaster", "home improvement section");
-        Product tyre = new Product("Tyre", 5);
-
-        System.out.println(tapeMeasure);
-        System.out.println(plaster);
-        System.out.println(tyre);
+        Counter number = new Counter(4);
+        number.decrease();
+        number.decrease(2);
+        number.increase();
+        number.increase(6);
+        System.out.println(number.value());
 }
 }

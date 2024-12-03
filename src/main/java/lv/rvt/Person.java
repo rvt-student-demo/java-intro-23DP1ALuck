@@ -1,4 +1,5 @@
 package lv.rvt;
+import java.util.Locale;
 
 public class Person {
     private String name;
@@ -47,10 +48,12 @@ public class Person {
     public double maximumHeartRate() {
         return 206.3 - (0.711 * this.age);
     }
-
+    public String toCsvRow(Person person){
+        return this.name + ", " + this.age + ", " + this.weight + ", " + this.height; 
+    }
+    @Override
     public String toString() {
-        // return "Name: " + this.name + ", age: " + this.age + ", weight: " + this.weight + ", height: " + this.height;
-        return String.format("Name: %s, Age: %d, Weight: %.2f, Height: %.2f", this.name, this.age, this.weight, this.height);
+        return String.format(Locale.US,"Name: %s, Age: %d, Weight: %.2f, Height: %.2f", this.name, this.age, this.weight, this.height);
     }
 }
 

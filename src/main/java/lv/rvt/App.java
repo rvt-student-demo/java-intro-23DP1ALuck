@@ -11,11 +11,12 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        BufferedReader reader = Helper.getReader("person.csv");
 
-        reader.readLine();
+        ArrayList<Person> persons = PersonManager.getPersonlist();
 
-        String row1 = reader.readLine();
-        System.out.println(row1);
+        for (Person person : persons){
+            System.out.println(person);
+        }
+        
     }
 }

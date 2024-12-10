@@ -26,11 +26,11 @@ public class Person {
         return this.age >= 18;
     }
     
-    public void setWeight(int weight){
+    public void setWeight(double weight){
         this.weight = weight;
     }
     
-    public void setHeight(int height){
+    public void setHeight(double height){
         this.height = height;
     }
     

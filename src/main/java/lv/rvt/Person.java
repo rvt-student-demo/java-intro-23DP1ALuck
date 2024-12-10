@@ -22,21 +22,18 @@ public class Person {
             this.age++;
         }
     }
-    public int returnAge() {
-        return this.age;
-    } 
     public boolean isOfLegalAge() {
         return this.age >= 18;
     }
-
+    
     public void setWeight(int weight){
         this.weight = weight;
     }
-
+    
     public void setHeight(int height){
         this.height = height;
     }
-
+    
     public double bodyMassIndex() {
         double heigthPerHundred = this.height / 100.0;
         return this.weight / (heigthPerHundred * heigthPerHundred);
@@ -45,15 +42,24 @@ public class Person {
     public String getName(){
         return this.name;
     }
+    public int getAge() {
+        return this.age;
+    }
+    public double getWeight(){
+        return this.weight;
+    }
+    public double getHeight(){
+        return this.height;
+    }
     public double maximumHeartRate() {
         return 206.3 - (0.711 * this.age);
     }
-    public String toCsvRow(Person person){
+    public String toCsvRow(){
         return this.name + ", " + this.age + ", " + this.weight + ", " + this.height; 
     }
     @Override
     public String toString() {
-        return String.format(Locale.US,"Name: %s, Age: %d, Weight: %.2f, Height: %.2f", this.name, this.age, this.weight, this.height);
+        return String.format(Locale.US,"|  %10s  |  %3d  |  %6.2f  |  %6.2f  |  %5.2f  |", getName(), getAge(), getWeight(), getHeight(), bodyMassIndex());
     }
 }
 

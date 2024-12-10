@@ -22,9 +22,9 @@ public class PersonManager {
     
     public static void addPerson(Person person)throws Exception{
         BufferedWriter writer = Helper.getWriter("person.csv", StandardOpenOption.APPEND);
-        String csvRow = person.toCsvRow(person);
-        writer.write(csvRow);
+        String csvRow = person.toCsvRow();
         writer.newLine();
+        writer.write(csvRow);
         writer.close();
     }
 }

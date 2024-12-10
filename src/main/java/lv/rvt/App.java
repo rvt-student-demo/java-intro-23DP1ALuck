@@ -13,24 +13,15 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        HealthStation childrensHospital = new HealthStation();
+        PaymentCard petesCard = new PaymentCard(10);
 
-        Person ethan = new Person("Ethan", 1, 7, 110);
-        Person peter = new Person("Peter", 33, 85, 176);
+        System.out.println("money " + petesCard.getBalance());
+        boolean wasSuccessful = petesCard.takeMoney(8);
+        System.out.println("successfully withdrew: " + wasSuccessful);
+        System.out.println("money " + petesCard.getBalance());
 
-
-        System.out.println("weighings performed: " + childrensHospital.weighings());
-
-        childrensHospital.weigh(ethan);
-        childrensHospital.weigh(peter);
-
-        System.out.println("weighings performed: " + childrensHospital.weighings());
-
-        childrensHospital.weigh(ethan);
-        childrensHospital.weigh(ethan);
-        childrensHospital.weigh(ethan);
-        childrensHospital.weigh(ethan);
-
-        System.out.println("weighings performed: " + childrensHospital.weighings());
+        wasSuccessful = petesCard.takeMoney(4);
+        System.out.println("successfully withdrew: " + wasSuccessful);
+        System.out.println("money " + petesCard.getBalance());
     }
 }

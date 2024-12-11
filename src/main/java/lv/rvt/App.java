@@ -13,15 +13,17 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        PaymentCard petesCard = new PaymentCard(10);
+        PaymentTerminal unicafeExactum = new PaymentTerminal();
 
-        System.out.println("money " + petesCard.getBalance());
-        boolean wasSuccessful = petesCard.takeMoney(8);
-        System.out.println("successfully withdrew: " + wasSuccessful);
-        System.out.println("money " + petesCard.getBalance());
+        double change = unicafeExactum.eatAffordably(10);
+        System.out.println("remaining change " + change);
 
-        wasSuccessful = petesCard.takeMoney(4);
-        System.out.println("successfully withdrew: " + wasSuccessful);
-        System.out.println("money " + petesCard.getBalance());
+        change = unicafeExactum.eatAffordably(5);
+        System.out.println("remaining change " + change);
+
+        change = unicafeExactum.eatHeartily(4.3);
+        System.out.println("remaining change " + change);
+
+        System.out.println(unicafeExactum);
     }
 }

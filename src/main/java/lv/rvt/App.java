@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -13,24 +14,11 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        PaymentTerminal unicafeExactum = new PaymentTerminal();
-        System.out.println(unicafeExactum);
+        Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
+        Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
+        Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
 
-        PaymentCard annesCard = new PaymentCard(2);
-
-        System.out.println("amount of money on the card is " + annesCard.getBalance() + " euros");
-
-        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        unicafeExactum.addMoneyToCard(annesCard, 100);
-
-        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        System.out.println("amount of money on the card is " + annesCard.getBalance() + " euros");
-
-        System.out.println(unicafeExactum);
-
-    }
+        System.out.println(manhattanStudioApt.largerThan(atlantaTwoBedroomApt));       // false
+        System.out.println(bangorThreeBedroomApt.largerThan(atlantaTwoBedroomApt));  // true
+}
 }

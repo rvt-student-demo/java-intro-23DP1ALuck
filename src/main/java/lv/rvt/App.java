@@ -27,6 +27,8 @@ public class App {
         System.out.println(manhattanStudioApt.priceDifference(atlantaTwoBedroomApt));  //71600
         System.out.println(bangorThreeBedroomApt.priceDifference(atlantaTwoBedroomApt));   //35400
 
-
-}
+//        Part 3
+        System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));  // false
+        System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt)); // true
+    }
 }

@@ -21,4 +21,8 @@ public class Apartment {
     public int priceDifference(Apartment compared){
         return Math.abs((this.pricePerSquare * this.squares) - (compared.pricePerSquare * compared.squares));
     }
+
+    public boolean moreExpensiveThan(Apartment compared){
+        return (this.pricePerSquare * this.squares) > (compared.pricePerSquare * compared.squares);
+    }
 }

@@ -17,4 +17,8 @@ public class Apartment {
         }
         return false;
     }
+
+    public int priceDifference(Apartment compared){
+        return Math.abs((this.pricePerSquare * this.squares) - (compared.pricePerSquare * compared.squares));
+    }
 }

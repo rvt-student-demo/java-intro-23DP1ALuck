@@ -14,9 +14,9 @@ public class ProductWarehouseWithHistory extends ProductWarehouse {
         historyManager.add(super.getBalance());
     }
     public double takeFromWarehouse(double amount) {
-        super.takeFromWarehouse(amount);
+        double amountGot = super.takeFromWarehouse(amount);
         historyManager.add(super.getBalance());
-        return amount;
+        return amountGot;
     }
     public void printAnalysis(){
         System.out.printf("Product: %s\nHistory: %s\nLargest amount: %.1f\nSmallest amount: %.1f\nAverage: %.1f",
